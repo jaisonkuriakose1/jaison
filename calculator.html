@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CALCULATOR</title>
+</head>
+<body  text= "black" style="background-color:black;">
+<center>
+<form name=cal>
+<table>
+
+<tr>
+<td colspan="1">
+<input type="text" name="ans" placeholder="enter expression" value="">
+</td>
+</tr>
+
+
+
+<tr>
+<td colspan="1">
+<center>
+<input type="button" value="7" onClick="document.cal.ans.value+='7'">
+<input type="button" value="8" onClick="document.cal.ans.value+='8'">
+<input type="button" value="9" onClick="document.cal.ans.value+='9'">
+<input type="button" value=" -" onClick="document.cal.ans.value+=' -'">
+</center>
+</td>
+</tr>
+
+<br>
+
+<tr>
+<td colspan="1">
+<center>
+<input type="button" value="4" onClick="document.cal.ans.value+='4'">
+<input type="button" value="5" onClick="document.cal.ans.value+='5'">
+<input type="button" value="6" onClick="document.cal.ans.value+='6'">
+<input type="button" value="+" onClick="document.cal.ans.value+='+'">
+</center>
+</td>
+</tr>
+
+<br>
+
+<tr>
+<td colspan="1">
+<center>
+<input type="button" value="1" onClick="document.cal.ans.value+='1'">
+<input type="button" value="2" onClick="document.cal.ans.value+='2'">
+<input type="button" value="3" onClick="document.cal.ans.value+='3'">
+<input type="button" value="*" onClick="document.cal.ans.value+='*'">
+</center>
+</td>
+</tr>
+
+<tr>
+<td colspan="1">
+<center>
+<input type="reset" value="C">
+<input type="button" value="0" onClick="document.cal.ans.value+='0'">
+<input type="button" value="=" onClick="document.cal.ans.value=eval(document.cal.ans.value)">
+<input type="button" value="/" onClick="document.cal.ans.value+='/'">
+</center>
+</td>
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>
