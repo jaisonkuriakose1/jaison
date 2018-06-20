@@ -7,18 +7,14 @@
 			
 			var fname = document.getElementById("fname");			
 			localStorage.setItem("fname", fname.value); 
-  			//var firstname = localStorage.getItem("fname"); 
-  			//document.getElementById("msg1").innerHTML=("First name: "+firstname);
-
+  			
   			var lname = document.getElementById("lname");
   			localStorage.setItem("lname", lname.value); 
-  			//var lastname = localStorage.getItem("lname"); 
-  			//document.getElementById("msg2").innerHTML=("Last name: "+lastname);
+
 
   			var email = document.getElementById("email");
   			localStorage.setItem("email", email.value); 
-  			//var emailid = localStorage.getItem("email"); 
-  			//document.getElementById("msg3").innerHTML=("Email id: "+emailid);
+  			
 
         var sex=0;
   			if (document.getElementById('gender1').checked) {
@@ -38,26 +34,12 @@
         }
         else
   			localStorage.setItem("sex1", sex1); 
-  			//var sexdetails1 = localStorage.getItem("sex1"); 
-  			//document.getElementById("msg4").innerHTML=("Sex: "+sexdetails1);
-  			//document.getElementById("msg6").innerHTML=("");
-  		
-
-
-  			//localStorage.setItem("sex1", sex1); 
-  			//var sexdetails2 = localStorage.getItem("sex2"); 
-  			//document.getElementById("msg6").innerHTML=("Sex: "+sexdetails2);
-  			//document.getElementById("msg4").innerHTML=("");
   			
-
-
-        
-
+  		
   			if (document.getElementById('handicaped').checked) {
   			var handicap = document.getElementById("handicaped");
   			localStorage.setItem("inability", handicap.value); 
-  			//var inability = localStorage.getItem("inability"); 
-  			//document.getElementById("msg5").innerHTML=(inability);
+  			
 			   }
          else {
           var handicap= "nil";
@@ -65,14 +47,14 @@
          }
              myFunction();
 
-     }
+      }
 
-
+/*----------------------function to get from localStorage--------------------------------*/
     function myFunction(){
      var firstname = localStorage.getItem("fname"); 
         document.getElementById("msg1").innerHTML=("First name: "+firstname);
 
-    var lastname = localStorage.getItem("lname"); 
+      var lastname = localStorage.getItem("lname"); 
         document.getElementById("msg2").innerHTML=("Last name: "+lastname);
 
       var emailid = localStorage.getItem("email"); 
@@ -91,8 +73,7 @@
         document.getElementById("msg5").innerHTML=("inability: ");
       }
 		
-  
-	</script>
+  </script>
 </head>	
 <title>
 Form
@@ -111,17 +92,16 @@ Form
 	</p>
 	<p>Handicaped<input type="checkbox" id="handicaped" value="handicaped"></p>
 	
-	<!--<input type="color" id="favcolor" value="#ff0000">
--->
+	
 	<input type="reset">
 	<input type="submit" value="Submit">
 </form>
-</body>
+
 <div id="msg1"></div>
 <div id="msg2"></div>
 <div id="msg3"></div>
 <div id="msg4"></div>
 <div id="msg6"></div>
 <div id="msg5"></div>
-
+</body>
 </html>
