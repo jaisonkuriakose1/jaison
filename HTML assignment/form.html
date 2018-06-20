@@ -1,5 +1,54 @@
 <html>
 
+<style>
+input[type=text], select {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email], select {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 75%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=reset] {
+    width: 75%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+
 <head>
 
   <style>
@@ -86,12 +135,14 @@ Form
 </title>
 <body onload= "myFunction();">
 <!------------------------------------------------------------------------------------------------------------->
+<div>
+ 
 <form name=sampleForm onsubmit="localsave(); return false">
 	<section>
 	<p>Firstname<input type="text" placeholder="enter firstname" id="fname"  ></p>
 	<p>Lastname<input type="text" placeholder="enter lastname" id="lname"  ></p>
 	</section>
-	<p>Email<input type="email" placeholder="enter email address" id="email"></p>
+	<p>Email   <input type="email" placeholder="enter email address" id="email"></p>
 	<p>
 	<input type="radio" id="gender1"> Male<br>
 	<input type="radio" id="gender2"> Female<br>
@@ -104,13 +155,14 @@ Form
 	<input type="submit" value="Submit">
 </form>
 
+</div>
 <!--------------------------------------------------------------------------------------------------------------->
 
-<div id="msg1"></div>
-<div id="msg2"></div>
-<div id="msg3"></div>
-<div id="msg4"></div>
-<div id="msg6"></div>
-<div id="msg5"></div>
+<p id="msg1"></p>
+<p id="msg2"></p>
+<p id="msg3"></p>
+<p id="msg4"></p>
+<p id="msg6"></p>
+<p id="msg5"></p>
 </body>
 </html>
