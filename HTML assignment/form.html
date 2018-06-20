@@ -1,16 +1,17 @@
 <html>
 
 <head>
-	<style>
-    		body {background-color: powderblue;}
-	</style>
+
+  <style>
+    body {background-color: powderblue;}
+  </style>
 
 	<script>
 		function localsave()
     {
 			
-			var fname = document.getElementById("fname");			
-			localStorage.setItem("fname", fname.value); 
+        var fname = document.getElementById("fname");			
+        localStorage.setItem("fname", fname.value); 
   			
   			var lname = document.getElementById("lname");
   			localStorage.setItem("lname", lname.value); 
@@ -19,7 +20,7 @@
   			var email = document.getElementById("email");
   			localStorage.setItem("email", email.value); 
   			
-
+        /*------------------gender--------------------*/
         var sex=0;
   			if (document.getElementById('gender1').checked) {
   
@@ -39,7 +40,7 @@
         else
   			localStorage.setItem("sex1", sex1); 
   			
-  		
+  		/*-----------------------inability----------------*/
   			if (document.getElementById('handicaped').checked) {
   			var handicap = document.getElementById("handicaped");
   			localStorage.setItem("inability", handicap.value); 
@@ -51,11 +52,11 @@
          }
              myFunction();
 
-      }
+    }
 
 /*----------------------function to get from localStorage--------------------------------*/
     function myFunction(){
-     var firstname = localStorage.getItem("fname"); 
+      var firstname = localStorage.getItem("fname"); 
         document.getElementById("msg1").innerHTML=("First name: "+firstname);
 
       var lastname = localStorage.getItem("lname"); 
@@ -78,11 +79,13 @@
       }
 		
   </script>
+<!--------------------------------------------------------------------------------------------------------------------->  
 </head>	
 <title>
 Form
 </title>
 <body onload= "myFunction();">
+<!------------------------------------------------------------------------------------------------------------->
 <form name=sampleForm onsubmit="localsave(); return false">
 	<section>
 	<p>Firstname<input type="text" placeholder="enter firstname" id="fname"  ></p>
@@ -100,6 +103,8 @@ Form
 	<input type="reset">
 	<input type="submit" value="Submit">
 </form>
+
+<!--------------------------------------------------------------------------------------------------------------->
 
 <div id="msg1"></div>
 <div id="msg2"></div>
