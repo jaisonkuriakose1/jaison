@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+	<style>
+		body {background-color: powderblue;}
+		p{
+    		
+    		padding: 3px;
+
+		}
+		
+		#error1 {
+			color: red;
+		}
+		#error2 {
+			color: red;
+		}
+		#error3{
+			color: red;
+		}
+		#error4{
+			color: red;
+		}
+	</style>
+<title>
+
+</title>
+<script src="./contact.js"></script>
+</head>
+
+<body>
+<div>
+	<h1 style="color:black;">Contact</h1>
+	
+
+</div>
+	<form method="POST" name="contactForm" onsubmit="ContactValidation();return false">
+
+	<p>Name<input type="name" placeholder="enter username" name="name" ></p>
+	<p id="error1"></p>
+		
+	<p>Email<input type="text" placeholder="enter your mail id" name="email" ></p>
+	<p id="error2"></p>
+
+	<p>Phone<input type="phone" placeholder="enter your phone number" name="phone" ></p>
+	<p id="error4"></p>
+	
+	<p>Question<input type="text"  name="question"></p>
+	<p id="error3"></p>
+
+	<button type="submit" name="Send">Send</button>
+	<p id="reply"></p>	
+	</form>
+
+
+
+</body>
+
+</html>

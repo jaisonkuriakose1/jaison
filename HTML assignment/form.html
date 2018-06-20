@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<script>
+		function localsave(){
+			
+			var fname = document.getElementById("fname");			
+			localStorage.setItem("fname", fname.value); 
+  			var firstname = localStorage.getItem("fname"); 
+  			document.getElementById("msg1").innerHTML=("First name: "+firstname);
+
+  			var lname = document.getElementById("lname");
+  			localStorage.setItem("lname", lname.value); 
+  			var lastname = localStorage.getItem("lname"); 
+  			document.getElementById("msg2").innerHTML=("Last name: "+lastname);
+
+  			var email = document.getElementById("email");
+  			localStorage.setItem("email", email.value); 
+  			var emailid = localStorage.getItem("email"); 
+  			document.getElementById("msg3").innerHTML=("Email id: "+emailid);
+
+  			if (document.getElementById('gender1').checked) {
+  
+  			var sex1 = document.getElementById("gender1");
+  			localStorage.setItem("sex1", sex1.value); 
+  			var sexdetails1 = localStorage.getItem("sex1"); 
+  			document.getElementById("msg4").innerHTML=("Sex: "+sexdetails1);
+  			document.getElementById("msg6").innerHTML=("");
+  			}
+
+
+  			if (document.getElementById('gender2').checked) {
+  
+  			var sex2 = document.getElementById("gender2");
+  			localStorage.setItem("sex2", sex2.value); 
+  			var sexdetails2 = localStorage.getItem("sex2"); 
+  			document.getElementById("msg6").innerHTML=("Sex: "+sexdetails2);
+  			document.getElementById("msg4").innerHTML=("");
+  			}
+
+  			if (document.getElementById('handicaped').checked) {
+  			var handicap = document.getElementById("handicaped");
+  			localStorage.setItem("inability", handicap.value); 
+  			var inability = localStorage.getItem("inability"); 
+  			document.getElementById("msg5").innerHTML=(inability);
+			}
+
+		}
+	</script>
+</head>	
+<title>
+Form
+</title>
+
+<form name=sampleForm onsubmit="localsave();return false">
+	<section>
+	<p>Firstname<input type="text" placeholder="enter firstname" id="fname" required="" ></p>
+	<p>Lastname<input type="text" placeholder="enter lastname" id="lname" required="" ></p>
+	</section>
+	<p>Email<input type="email" placeholder="enter email address" id="email"  required=""></p>
+	<p>
+	<input type="radio" id="gender1" value="male"> Male<br>
+	<input type="radio" id="gender2" value="female"> Female<br>
+	
+	</p>
+	<p>Handicaped<input type="checkbox" id="handicaped" value="handicaped"></p>
+	
+	<!--<input type="color" id="favcolor" value="#ff0000">
+-->
+	<input type="reset">
+	<input type="submit" value="Submit">
+</form>
+
+<div id="msg1"></div>
+<div id="msg2"></div>
+<div id="msg3"></div>
+<div id="msg4"></div>
+<div id="msg6"></div>
+<div id="msg5"></div>
+
+</html>
