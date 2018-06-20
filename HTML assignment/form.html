@@ -6,45 +6,59 @@
 			
 			var fname = document.getElementById("fname");			
 			localStorage.setItem("fname", fname.value); 
-  			var firstname = localStorage.getItem("fname"); 
-  			document.getElementById("msg1").innerHTML=("First name: "+firstname);
+  			//var firstname = localStorage.getItem("fname"); 
+  			//document.getElementById("msg1").innerHTML=("First name: "+firstname);
 
   			var lname = document.getElementById("lname");
   			localStorage.setItem("lname", lname.value); 
-  			var lastname = localStorage.getItem("lname"); 
-  			document.getElementById("msg2").innerHTML=("Last name: "+lastname);
+  			//var lastname = localStorage.getItem("lname"); 
+  			//document.getElementById("msg2").innerHTML=("Last name: "+lastname);
 
   			var email = document.getElementById("email");
   			localStorage.setItem("email", email.value); 
-  			var emailid = localStorage.getItem("email"); 
-  			document.getElementById("msg3").innerHTML=("Email id: "+emailid);
+  			//var emailid = localStorage.getItem("email"); 
+  			//document.getElementById("msg3").innerHTML=("Email id: "+emailid);
 
   			if (document.getElementById('gender1').checked) {
   
   			var sex1 = document.getElementById("gender1");
   			localStorage.setItem("sex1", sex1.value); 
-  			var sexdetails1 = localStorage.getItem("sex1"); 
-  			document.getElementById("msg4").innerHTML=("Sex: "+sexdetails1);
-  			document.getElementById("msg6").innerHTML=("");
+  			//var sexdetails1 = localStorage.getItem("sex1"); 
+  			//document.getElementById("msg4").innerHTML=("Sex: "+sexdetails1);
+  			//document.getElementById("msg6").innerHTML=("");
   			}
 
 
   			if (document.getElementById('gender2').checked) {
   
   			var sex2 = document.getElementById("gender2");
-  			localStorage.setItem("sex2", sex2.value); 
-  			var sexdetails2 = localStorage.getItem("sex2"); 
-  			document.getElementById("msg6").innerHTML=("Sex: "+sexdetails2);
-  			document.getElementById("msg4").innerHTML=("");
+  			localStorage.setItem("sex1", sex2.value); 
+  			//var sexdetails2 = localStorage.getItem("sex2"); 
+  			//document.getElementById("msg6").innerHTML=("Sex: "+sexdetails2);
+  			//document.getElementById("msg4").innerHTML=("");
   			}
 
   			if (document.getElementById('handicaped').checked) {
   			var handicap = document.getElementById("handicaped");
   			localStorage.setItem("inability", handicap.value); 
-  			var inability = localStorage.getItem("inability"); 
-  			document.getElementById("msg5").innerHTML=(inability);
+  			//var inability = localStorage.getItem("inability"); 
+  			//document.getElementById("msg5").innerHTML=(inability);
 			}
 
+      var firstname = localStorage.getItem("fname"); 
+        document.getElementById("msg1").innerHTML=("First name: "+firstname);
+
+    var lastname = localStorage.getItem("lname"); 
+        document.getElementById("msg2").innerHTML=("Last name: "+lastname);
+
+      var emailid = localStorage.getItem("email"); 
+        document.getElementById("msg3").innerHTML=("Email id: "+emailid); 
+
+      var sexdetails1 = localStorage.getItem("sex1"); 
+        document.getElementById("msg4").innerHTML=("Sex: "+sexdetails1);
+
+      var inability = localStorage.getItem("inability"); 
+        document.getElementById("msg5").innerHTML=(inability);
 		}
 	</script>
 </head>	
